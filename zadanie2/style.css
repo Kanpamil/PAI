@@ -1,0 +1,24 @@
+html,body,p {
+    margin: 0px;
+    padding: 0px;
+}
+*{
+    box-sizing:border-box;
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight:unset;
+    text-decoration: none;
+    color:black;
+}
+header {
+    display:flex;
+    flex-direction: row;
+}
+main {
+    display:flex;
+    flex-direction: row ;
+}
+footer {
+    display:flex;
+    flex-direction: column;
+}
