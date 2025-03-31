@@ -65,11 +65,6 @@ function alterRows(i, e) {
         alterRows(++i, e);
     }
 }
-function colorTable(){
-    let table = document.getElementsByTagName("tbody")[0];
-    let firstRow = table.getElementsByTagName("tr")[0];
-    alterRows(1, firstRow);
-}
 
 function nextNode(e) {
     while (e && e.nodeType != 1) {
@@ -100,4 +95,4 @@ function cnt(form, msg, maxSize) {
     else
         msg.innerHTML = maxSize - form.value.length;
 }
-colorTable()
+alterRows(1,document.getElementsByTagName("tr")[0])
