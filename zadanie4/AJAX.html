@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamiczna Strona</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        a { margin: 10px; }
+        #content { border: 1px solid black; padding: 20px; width: 50%; }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('a').click(function () {
+                var thisA = $(this);
+                $('#content').fadeOut('medium', function () {
+                $('#content').load(thisA.attr('href'), function () {
+                $('#content').fadeIn();
+                });
+                });
+                return false;
+                });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Selektory.html">Strona1</a>
+            <a href="Style.html">Strona2</a>
+            <a href="Zdarzenia.html">Strona3</a>
+        </nav>
+    </header>
+    <div id="content"></div>
+</body>
+</html>
